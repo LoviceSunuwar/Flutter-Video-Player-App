@@ -1,3 +1,6 @@
+
+import 'package:castllyv2/Screens/Components/tab_login_signup.dart';
+import 'package:castllyv2/Screens/Login/login.dart';
 import 'package:castllyv2/Screens/Onboarding/Components/sliderpage.dart';
 import 'package:flutter/material.dart';
 
@@ -74,7 +77,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     decoration: BoxDecoration(
                         color: (index == _onboardingpage)
                             ? Colors.pink
-                            : Colors.pink.withOpacity(0.5),
+                            : Colors.pink.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(10)),
                   );
                 }),
@@ -87,17 +90,21 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       curve: Curves.easeInOutQuint);
                 },
                 child: InkWell(
-                  // onTap: (){(
-                  //   _onboardingpage == (_onboardingpages.length - 1)
-                  // ) ? _onboardingcontroller.nextPage(
-                  //     duration: Duration(milliseconds: 800),
-                  //     curve: Curves.easeInOutQuint) :
+                  onTap: (){
+                    (
+                    _onboardingpage == (_onboardingpages.length - 1)
+                  ) ? 
+                  Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                          new LoginTab())
+                        ) :
+                  
+                  _onboardingcontroller.nextPage(
+                      duration: Duration(milliseconds: 800),
+                      curve: Curves.easeInOutQuint) ;
 
-                  //   Navigator.push(context, MaterialPageRoute(
-                  //       builder: (context) =>
-                  //         new ())
-                  //       );
-                  //},
+                    
+                  },
                   child: AnimatedContainer(
                     duration: Duration(milliseconds: 300),
                     height: 70,
