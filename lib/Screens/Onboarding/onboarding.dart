@@ -1,6 +1,6 @@
 
 import 'package:castllyv2/Screens/Components/tab_login_signup.dart';
-import 'package:castllyv2/Screens/Login/login.dart';
+
 import 'package:castllyv2/Screens/Onboarding/Components/sliderpage.dart';
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,12 @@
-import 'package:castllyv2/Screens/Components/tab_login_signup.dart';
+
 import 'package:castllyv2/Screens/Login/components/loginbackgound.dart';
+import 'package:castllyv2/services/authenticate.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class LoginBody extends StatelessWidget {
+
+  var email, password, token;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -33,6 +37,9 @@ class LoginBody extends StatelessWidget {
                       child: TextField(
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 15),
+                        onChanged: (val) {
+                          email = val;
+                        },
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Enter your email address",
@@ -59,6 +66,9 @@ class LoginBody extends StatelessWidget {
                         obscureText: true,
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 15),
+                         onChanged: (val) {
+                          password = val;
+                        },
                         decoration: InputDecoration(
                             border: InputBorder.none,
                             hintText: "Enter your password",
@@ -88,7 +98,20 @@ class LoginBody extends StatelessWidget {
                     height: 30,
                   ),
                   InkWell(
-                    onTap: null,
+                    onTap: (){
+                      AuthService().signin(email, password).then((val) {
+                        if (val.data['success']) {
+                          token = val.data['token'];
+                          Fluttertoast.showToast(msg: 'Welcome',
+                          backgroundColor: Colors.green,
+                          textColor: Colors.white,
+                          gravity: ToastGravity.BOTTOM,
+                          fontSize: 15,
+                          toastLength: Toast.LENGTH_SHORT
+                          );
+                        }
+                      });
+                    },
                     child: Container(
                       height: 50,
                       width: size.width * 0.95,
