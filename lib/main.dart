@@ -1,4 +1,5 @@
 import 'package:castllyv2/Screens/Onboarding/onboarding.dart';
+import 'package:castllyv2/Screens/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Castlly V2',
       debugShowCheckedModeBanner: false,
       home: OnBoardingScreen(),
+       routes: Routes.getRoutes,
     );
   }
 }

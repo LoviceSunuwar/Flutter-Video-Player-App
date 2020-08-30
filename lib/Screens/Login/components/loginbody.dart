@@ -1,5 +1,7 @@
 
 import 'package:castllyv2/Screens/Login/components/loginbackgound.dart';
+import 'package:castllyv2/Screens/forgotpassword/forgotpassword.dart';
+import 'package:castllyv2/Screens/homepage/homepage.dart';
 import 'package:castllyv2/services/authenticate.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -86,7 +88,10 @@ class LoginBody extends StatelessWidget {
                       alignment: Alignment.centerRight,
 
                       child: InkWell(
-                        onTap: null,
+                        onTap: (){Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                          new ForgotPassword())
+                        );},
                         child: Text("Forgot your password ?",
                         style: TextStyle(
                           fontSize: 15,
@@ -99,18 +104,31 @@ class LoginBody extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: (){
-                      AuthService().signin(email, password).then((val) {
-                        if (val.data['success']) {
-                          token = val.data['token'];
-                          Fluttertoast.showToast(msg: 'Welcome',
-                          backgroundColor: Colors.green,
-                          textColor: Colors.white,
-                          gravity: ToastGravity.BOTTOM,
-                          fontSize: 15,
-                          toastLength: Toast.LENGTH_SHORT
-                          );
-                        }
-                      });
+                      // AuthService().signin(email, password).then((val) {
+                      //   if (val.data['success']) {
+                      //     token = val.data['token'];
+                      //     Fluttertoast.showToast(msg: 'Welcome',
+                      //     backgroundColor: Colors.green,
+                      //     textColor: Colors.white,
+                      //     gravity: ToastGravity.BOTTOM,
+                      //     fontSize: 15,
+                      //     toastLength: Toast.LENGTH_SHORT
+                      //     );
+                      //   }
+                      //   else {
+                      //     Fluttertoast.showToast(msg: 'Email and Password do not match',
+                      //     backgroundColor: Colors.red,
+                      //     textColor: Colors.white,
+                      //     gravity: ToastGravity.BOTTOM,
+                      //     fontSize: 15,
+                      //     toastLength: Toast.LENGTH_SHORT
+                      //     );
+                      //   }
+                      // });
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                          new HomepageScreen())
+                        );
                     },
                     child: Container(
                       height: 50,
