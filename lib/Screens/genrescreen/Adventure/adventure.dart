@@ -16,7 +16,13 @@ class _AdventureScreenState extends State<AdventureScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Adventure", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: AdventureBody(),
     );
   }

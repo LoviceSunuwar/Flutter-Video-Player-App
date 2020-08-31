@@ -16,7 +16,13 @@ class _KidsScreenState extends State<KidsScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("KIds", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: KidsBody(),
     );
   }

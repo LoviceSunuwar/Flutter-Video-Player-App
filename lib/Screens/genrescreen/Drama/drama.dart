@@ -16,7 +16,13 @@ class _DramaScreenState extends State<DramaScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Drama", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: DramaBody(),
     );
   }

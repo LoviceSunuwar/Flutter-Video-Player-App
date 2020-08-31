@@ -4,6 +4,7 @@ import 'package:castllyv2/Screens/homepage/components/carousel.dart';
 import 'package:castllyv2/Screens/homepage/components/categorylist.dart';
 import 'package:castllyv2/Screens/homepage/components/categoryname.dart';
 import 'package:castllyv2/Screens/homepage/components/moviecard.dart';
+import 'package:castllyv2/Screens/search/search.dart';
 import 'package:flutter/material.dart';
 
 class HomepageBody extends StatelessWidget {
@@ -84,7 +85,12 @@ class LogoBarTop extends StatelessWidget {
         IconButton(
         icon: Icon(Icons.search, size: 30,
         color: Colors.black,), 
-        onPressed: null),
+        onPressed: (){
+           Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                          new SearchScreen())
+                        );
+              },),
     
         ],
       ),

@@ -16,7 +16,13 @@ class _RealityScreenState extends State<RealityScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Romance / Love", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: RealityBody(),
     );
   }

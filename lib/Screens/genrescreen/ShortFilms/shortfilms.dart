@@ -16,7 +16,13 @@ class _ShortFilmsScreenState extends State<ShortFilmsScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Short Films", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: ShortFilmsBody(),
     );
   }

@@ -16,7 +16,13 @@ class _HorrorScreenState extends State<HorrorScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Action", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: HorrorBody(),
     );
   }

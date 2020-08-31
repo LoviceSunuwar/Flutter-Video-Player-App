@@ -16,7 +16,13 @@ class _HumanKindScreenState extends State<HumanKindScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Human Kind", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: HumanKindBody(),
     );
   }

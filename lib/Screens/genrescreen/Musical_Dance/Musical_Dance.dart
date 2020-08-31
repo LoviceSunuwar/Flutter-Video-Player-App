@@ -16,7 +16,13 @@ class _MusicalDanceScreenState extends State<MusicalDanceScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ), 
+  title: Text("Musical Dance", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+  ),
   body: MusicalDanceBody(),
     );
   }

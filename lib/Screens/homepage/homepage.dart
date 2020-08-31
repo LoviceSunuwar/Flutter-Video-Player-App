@@ -2,6 +2,7 @@
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:castllyv2/Screens/genre/genre.dart';
 import 'package:castllyv2/Screens/homepage/components/body.dart';
+import 'package:castllyv2/Screens/more/more.dart';
 import 'package:castllyv2/Screens/search/search.dart';
 import 'package:flutter/material.dart';
 class HomepageScreen extends StatefulWidget {
@@ -45,11 +46,11 @@ class _HomepageScreenState extends State<HomepageScreen> {
         opacity: 0.2,
         backgroundColor: Colors.white,
         currentIndex: currentIndex,
-        borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
+        //borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
         hasInk: false,
         inkColor: Colors.black12,
         hasNotch: false,
-        fabLocation: BubbleBottomBarFabLocation.end,
+        //fabLocation: BubbleBottomBarFabLocation.end,
         onTap: changePage,
         items: <BubbleBottomBarItem>[
           BubbleBottomBarItem(
@@ -91,7 +92,14 @@ class _HomepageScreenState extends State<HomepageScreen> {
             ),
             BubbleBottomBarItem(
             backgroundColor: Colors.pink,
-            icon: Icon(Icons.dashboard, color: Colors.black),
+            icon: InkWell(
+              onTap: (){
+           Navigator.push(context, MaterialPageRoute(
+                        builder: (context) =>
+                          new MoreScreen())
+                        );
+        },
+              child: Icon(Icons.dashboard, color: Colors.black)),
             activeIcon: Icon(Icons.dashboard, color: Colors.pink),
             title: Text("More"),
             

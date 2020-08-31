@@ -16,7 +16,13 @@ class _HistoricalScreenState extends State<HistoricalScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Historical", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: HistoricalBody(),
     );
   }

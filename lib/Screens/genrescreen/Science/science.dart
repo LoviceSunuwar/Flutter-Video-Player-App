@@ -16,7 +16,13 @@ class _ScienceScreenState extends State<ScienceScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Science", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: ScienceBody(),
     );
   }

@@ -16,7 +16,13 @@ class _ComedyScreenState extends State<ComedyScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Comedy", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: ComedyBody(),
     );
   }

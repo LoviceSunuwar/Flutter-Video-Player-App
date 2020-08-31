@@ -16,7 +16,13 @@ class _EducationScreenState extends State<EducationScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Education", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: EducationBody(),
     );
   }

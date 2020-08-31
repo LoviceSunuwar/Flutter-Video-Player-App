@@ -16,7 +16,13 @@ class _SeriesScreenState extends State<SeriesScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Series", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: SeriesBody(),
     );
   }

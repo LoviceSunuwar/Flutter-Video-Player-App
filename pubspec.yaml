@@ -32,6 +32,7 @@ dependencies:
   fluttertoast: ^7.0.2
   carousel_slider: ^2.2.1
   bubble_bottom_bar: ^1.2.0
+  chewie: ^0.9.10
 
 flutter_icons:
   image_path: "assets/images/logo/Circlelogo.png"
@@ -90,7 +91,8 @@ flutter:
     - assets/images/extra/gift.jpg
     - assets/images/extra/atm.jpg
     - assets/images/extra/search.jpg
-
+    - assets/images/extra/qr.png
+    - assets/videos/dummy.mp4
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see

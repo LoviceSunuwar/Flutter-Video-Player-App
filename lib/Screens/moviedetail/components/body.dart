@@ -74,35 +74,90 @@ class MovieBody extends StatelessWidget {
                   ),
 
                   Container(
-                    child: Column(
+                    height: 70,
+                    decoration: BoxDecoration(
+                      border: Border(
+                      bottom: BorderSide(width: 2.0, color: Colors.pink),
+                      )
+                    ),
+                    child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          movie.title,
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 20,
+                      //mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Center(
+                          child: Container(
+                            width: size.width * 0.6,
+                            child: Text(movie.title, 
+                            style: TextStyle(
+                              fontSize: 22,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.black
+                            ),
+                            ),
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Text("Time: ${movie.time} Minutes"),
-                            SizedBox(
-                              width: 10,
+                        Center(
+                          child: Container(
+                            height: 70,
+                            width: size.width * 0.18,
+                            decoration: BoxDecoration(
+                              color: Colors.blue
                             ),
-                            Text("Size: ${movie.size} MB")
-                          ],
-                        )
-                      ],
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.timelapse,
+                                  size: 40,
+                                ),
+                                Text("${movie.time} Min", 
+                                style: TextStyle(
+                                  fontSize: 16
+                                ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Container(
+                            height: 70,
+                            width: size.width * 0.171,
+                            decoration: BoxDecoration(
+                      border: Border(
+                      left: BorderSide(width: 1.0, color: Colors.black),
+                      ),
+                      color: Colors.yellow
                     ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.view_agenda,
+                                  size: 40,
+                                ),
+                                Text("${movie.size} MB", 
+                                style: TextStyle(
+                                  fontSize: 16
+                                ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )      
+
+                      ],
+                    )
                   ),
 
                   Padding(
                     padding: EdgeInsets.symmetric(
-                      vertical: 5,
+                      vertical: 15,
                       horizontal: 10,
                     ),
                     child: Container(

@@ -16,7 +16,13 @@ class _CrimeScreenState extends State<CrimeScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Crime", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: CrimeBody(),
     );
   }

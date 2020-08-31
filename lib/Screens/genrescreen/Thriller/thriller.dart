@@ -16,7 +16,13 @@ class _ThrillerScreenState extends State<ThrillerScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Thirller", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: ThrillerBody(),
     );
   }

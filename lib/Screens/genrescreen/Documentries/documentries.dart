@@ -16,7 +16,13 @@ class _DocumentriesScreenState extends State<DocumentriesScreen> {
         leading: IconButton(
     icon: Icon(Icons.arrow_back, color: Colors.black),
     onPressed: () => Navigator.of(context).pop(),
-  ), ),
+  ),
+  title: Text("Documentries", 
+    style: TextStyle(
+      color: Colors.black
+    ),
+  ),
+   ),
   body: DocumentriesBody(),
     );
   }
